@@ -1,0 +1,41 @@
+include $HOME/.config/i3/workspaces.conf
+set $Monitor_right DP-0
+set $Monitor_left HDMI-0
+
+# include $HOME/.config/i3/bar.conf
+set $mod Mod4
+font pango:monospace 8
+
+exec_always --no-startup-id ~/.config/i3/autostart.sh
+
+# Start Compose
+# exec_always --no-startup-id picom
+exec --no-startup-id picom --experimental-backends 
+
+# Start master stack
+exec --no-startup-id ~/.config/i3/i3_master_layout.py
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# toggle tiling / floating
+# bindsym $mod+Shift+space floating toggle
+
+exec --no-startup-id master-stack
+
+new_window 1pixel
+gaps inner 8
+gaps outer 4
+
+# Workspaces
+# bindsym $mod+1 workspace $ws1 ; move workspace to output $Monitor_left ; workspace $ws2 ; move workspace to output $Monitor_right
+# bindsym $mod+2 workspace $ws3 ; move workspace to output $Monitor_left ; workspace $ws4 ; move workspace to output $Monitor_right
+# bindsym $mod+3 workspace $ws5 ; move workspace to output $Monitor_left ; workspace $ws6 ; move workspace to output $Monitor_right
+# bindsym $mod+4 workspace $ws7 ; move workspace to output $Monitor_left ; workspace $ws8 ; move workspace to output $Monitor_right
+# bindsym $mod+5 workspace $ws9 ; move workspace to output $Monitor_left ; workspace $ws10 ; move workspace to output $Monitor_right
+
+bindsym $mod+1 workspace $ws1 ; move workspace to output $Monitor_right
+bindsym $mod+2 workspace $ws2 ; move workspace to output $Monitor_right
+bindsym $mod+3 workspace $ws3 ; move workspace to output $Monitor_right
+bindsym $mod+4 workspace $ws4 ; move workspace to output $Monitor_right
+bindsym $mod+5 workspace $ws5 ; move workspace to output $Monitor_right
