@@ -8,7 +8,7 @@ check_if_empty() {
 	[[ -z "$1" ]] && echo "0" || echo "$1"
 }
 
-KEY=56bfec39d45f284396f7e099cf4d150e
+KEY=KEY_IS_NOT_WORKING_ANYMORE
 ID='3466537'
 UNIT='metric'
 CITY='Caxias do Sul'
